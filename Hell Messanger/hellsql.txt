@@ -1,0 +1,34 @@
+create database yochat;
+
+use yochat;
+
+create table regist(userid int(5) primary key,
+name varchar(50),
+class int(2),
+section varchar(1),
+rollno int(4),
+password varchar(60));
+
+create table messag(messageid int(5) primary key,
+sender int(5),
+receiver int(5),
+message varchar(200),
+status varchar(10));
+
+create table feed(feedbackid int(5) primary key,
+feedback varchar(200),
+senderid int(5),
+reply varchar(200),
+status varchar(10));
+
+create table complain(complaintid int(5) primary key,
+hero int(5),
+daku int(5),
+content varchar(200),
+reply varchar(200),
+warning varchar(200),
+statushero varchar(40),
+statusdaku varchar(20),
+messageid int(5));
+
+insert into regist values(1,"Administrator",12,"A",41,"administrator");
